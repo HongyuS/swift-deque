@@ -1,6 +1,9 @@
-public struct Deque {
-    public private(set) var text = "Hello, World!"
+//
+//  Deque.swift
+//  Deque
+//
+//  Created by Hongyu Shi on 2022/6/21.
+//
 
-    public init() {
-    }
-}
+import ArrayDeque
+import LinkedListDeque

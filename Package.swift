@@ -10,6 +10,12 @@ let package = Package(
         .library(
             name: "Deque",
             targets: ["Deque"]),
+        .library(
+            name: "ArrayDeque",
+            targets: ["ArrayDeque"]),
+        .library(
+            name: "LinkedListDeque",
+            targets: ["LinkedListDeque"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -19,8 +25,20 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
-            name: "Deque",
+            name: "_DequeProtocol",
             dependencies: []),
+        .target(
+            name: "_DoublyCircularLinkedList",
+            dependencies: []),
+        .target(
+            name: "ArrayDeque",
+            dependencies: ["_DequeProtocol"]),
+        .target(
+            name: "LinkedListDeque",
+            dependencies: ["_DoublyCircularLinkedList", "_DequeProtocol"]),
+        .target(
+            name: "Deque",
+            dependencies: ["ArrayDeque", "LinkedListDeque"]),
         .testTarget(
             name: "DequeTests",
             dependencies: ["Deque"]),
