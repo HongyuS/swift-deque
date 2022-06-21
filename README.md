@@ -1,3 +1,3 @@
 # Deque
 
-A description of this package.
+Double-ended quene implemented using both array and linked list.
