@@ -15,7 +15,7 @@ final class DequeTests: XCTestCase {
         XCTAssertEqual(deque.removeFirst(), 4)
         XCTAssertEqual(deque.removeLast(), 5)
         XCTAssertEqual(deque.removeFirst(), 1)
-        XCTAssertEqual(deque.isEmpty, true)
+        XCTAssertTrue(deque.isEmpty)
     }
     
     func testLinkedList() throws {
@@ -29,6 +29,6 @@ final class DequeTests: XCTestCase {
         XCTAssertEqual(deque.removeFirst(), 4)
         XCTAssertEqual(deque.removeLast(), 5)
         XCTAssertEqual(deque.removeFirst(), 1)
-        XCTAssertEqual(deque.isEmpty, true)
+        XCTAssertTrue(deque.isEmpty)
     }
 }

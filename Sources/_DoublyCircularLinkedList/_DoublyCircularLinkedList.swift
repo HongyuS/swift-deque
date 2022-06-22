@@ -49,20 +49,18 @@ public struct _DoublyCircularLinkedList<Element> {
     
     public mutating func removeFirst() -> Element? {
         let first = _start.next!
-        guard let element = first.element else { return nil }
         _start.next = first.next!
         _start.next!.previous = _start
         count -= 1
-        return element
+        return first.element
     }
     
     public mutating func removeLast() -> Element? {
         let last = _start.previous!
-        guard let element = last.element else { return nil }
         _start.previous = last.previous!
         _start.previous!.next = _start
         count -= 1
-        return element
+        return last.element
     }
 }
 
