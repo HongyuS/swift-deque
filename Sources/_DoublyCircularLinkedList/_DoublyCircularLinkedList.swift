@@ -10,7 +10,7 @@ import Foundation
 public struct _DoublyCircularLinkedList<Element> {
     
     class Node {
-        var previous: Node?
+        weak var previous: Node?
         var element: Element?
         var next: Node?
         
